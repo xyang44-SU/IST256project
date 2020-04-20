@@ -1,0 +1,6 @@
+names = pd.Series( data = ['Allen','Bob','Chris','Dave','Ed','Frank','Gus'])
+gpas = pd.Series( data = [4.0, 3.0, 3.4, 2.8, 2.5, 3.8, 3.0])
+years = pd.Series( data = ['So', 'Fr', 'Fr', 'Jr', 'Sr', 'Sr', 'Fr'])
+series_dict = { 'Name':  names, 'GPA': gpas, 'Year' : years }  # dict of Series, keys are the series names
+students = pd.DataFrame( series_dict )
+students
