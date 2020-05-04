@@ -26,3 +26,21 @@ elif ReputationSentiment(positive_text, negative_text, input_text) == 0:
     print(input_text,'shows neutral reputation for 2020 election and', input_text, 'got',ReputationSentiment(positive_text, negative_text, input_text), 'same number of both positive and negative comments')
 
 #example of panda
+names = pd.Series( data = ['Allen','Bob','Chris','Dave','Ed','Frank','Gus']) 
+ gpas = pd.Series( data = [4.0, 3.0, 3.4, 2.8, 2.5, 3.8, 3.0]) 
+ years = pd.Series( data = ['So', 'Fr', 'Fr', 'Jr', 'Sr', 'Sr', 'Fr']) 
+ series_dict = { 'Name': names, 'GPA': gpas, 'Year' : years } # dict of Series, keys are the series names 
+ students = pd.DataFrame( series_dict ) 
+ 
+ #example of api
+ 
+ Resource URL 
+ https://api.twitter.com/1.1/search/tweets.json 
+     Example Requests 
+ $ curl --request GET  
+ --url 'https://api.twitter.com/1.1/search/tweets.json?q=from%3Atwitterdev&result_type=mixed&count=2'  
+ --header 'authorization: OAuth oauth_consumer_key="consumer-key-for-app",  
+ oauth_nonce="generated-nonce", oauth_signature="generated-signature",  
+ oauth_signature_method="HMAC-SHA1", oauth_timestamp="generated-timestamp",  
+ oauth_token="access-token-for-authed-user", oauth_version="1.0"' 
+ $ twurl /1.1/search/tweets.json?q=from%3Atwitterdev&result_type=mixed&count=2 
