@@ -1,0 +1,28 @@
+# example of sentiment
+def ReputationSentiment(positive_text, negative_text, input_text):
+        sentiment_score = 0
+        each_word = input_text.split(' ')
+        for each_word in each_word:
+            if each_word in positive text:
+                sentiment_score = sentiment_score + 1
+            elif each_word in negative_text:
+                sentiment_score = sentimen_score - 1
+        return sentiment_score 
+    
+positive_text = ['good', 'negative' ,'competent', 'reliable', 'capable', 'talented', 'excellent','outstanding']
+negative_text = ['bad', 'positive' ,'incompentence', 'incompetent', 'incapacity', 'useless', 'ineffective']
+
+input_text = "Type candidate you want to search for or type quit to exit"
+ReputationSentiment(positive_text, negative_text, input_text)
+
+
+if input_text == 'quit'
+    print("Goodbye.")
+elif ReputationSentiment(positive_text, negative_text, input_text) > 0:
+    print(input_text,'shows positive reputation for 2020 election and', input_text, 'got',ReputationSentiment(positive_text, negative_text, input_text), 'positive comments')
+elif ReputationSentiment(positive_text, negative_text, input_text) < 0:
+    print(input_text,'shows negative reputation for 2020 election and', input_text, 'got',ReputationSentiment(positive_text, negative_text, input_text), 'negative comments')
+elif ReputationSentiment(positive_text, negative_text, input_text) == 0:
+    print(input_text,'shows neutral reputation for 2020 election and', input_text, 'got',ReputationSentiment(positive_text, negative_text, input_text), 'same number of both positive and negative comments')
+
+#example of panda
